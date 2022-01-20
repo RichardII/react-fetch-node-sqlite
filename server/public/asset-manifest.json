@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.00196592.chunk.css",
+    "main.js": "/static/js/main.8be2fa8c.chunk.js",
+    "main.js.map": "/static/js/main.8be2fa8c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0a826900.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0a826900.js.map",
+    "static/css/2.7a1f7534.chunk.css": "/static/css/2.7a1f7534.chunk.css",
+    "static/js/2.f1014f73.chunk.js": "/static/js/2.f1014f73.chunk.js",
+    "static/js/2.f1014f73.chunk.js.map": "/static/js/2.f1014f73.chunk.js.map",
+    "static/js/3.b8fbc160.chunk.js": "/static/js/3.b8fbc160.chunk.js",
+    "static/js/3.b8fbc160.chunk.js.map": "/static/js/3.b8fbc160.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.7a1f7534.chunk.css.map": "/static/css/2.7a1f7534.chunk.css.map",
+    "static/css/main.00196592.chunk.css.map": "/static/css/main.00196592.chunk.css.map",
+    "static/js/2.f1014f73.chunk.js.LICENSE.txt": "/static/js/2.f1014f73.chunk.js.LICENSE.txt",
+    "static/media/markdown.css": "/static/media/Helvetica.8b1b4a67.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0a826900.js",
+    "static/css/2.7a1f7534.chunk.css",
+    "static/js/2.f1014f73.chunk.js",
+    "static/css/main.00196592.chunk.css",
+    "static/js/main.8be2fa8c.chunk.js"
+  ]
+}

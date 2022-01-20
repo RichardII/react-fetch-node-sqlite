@@ -1,0 +1,419 @@
+/*
+Copyright (c) 2017 Chris Patuzzo
+https://twitter.com/chrispatuzzo
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./fonts/Helvetica.woff');
+}
+
+.markdown {
+    font-family: Helvetica, arial, sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    background-color: white !important;
+    padding: 30px !important;
+    color: #333 !important;
+    text-align: left !important;
+    max-width: 75% !important;
+    margin: 1.5rem auto !important;
+  }
+  
+  .markdown > *:first-child {
+    margin-top: 0 !important;
+  }
+  
+  .markdown > *:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .markdown a {
+    color: #4183C4 !important;
+    text-decoration: none !important;
+  }
+  
+  .markdown .markdown a.absent {
+    color: #cc0000 !important;
+  }
+  
+  .markdown a.anchor {
+    display: block !important;
+    padding-left: 30px !important;
+    margin-left: -30px !important;
+    cursor: pointer !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+  }
+  
+  .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+    margin: 20px 0 10px !important;
+    padding: 0 !important;
+    font-weight: bold !important;
+    -webkit-font-smoothing: antialiased !important;
+    cursor: text !important;
+    position: relative !important;
+    line-height: 1.6 !important;
+  }
+  
+  .markdown h2:first-child, .markdown h1:first-child, .markdown h1:first-child + h2, .markdown h3:first-child, .markdown h4:first-child, .markdown h5:first-child, .markdown h6:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  .markdown h1:hover a.anchor, .markdown h2:hover a.anchor, .markdown h3:hover a.anchor, .markdown h4:hover a.anchor, .markdown h5:hover a.anchor, .markdown h6:hover a.anchor {
+    text-decoration: none !important;
+  }
+  
+  .markdown h1 tt, .markdown h1 code {
+    font-size: inherit !important;
+  }
+  
+  .markdown h2 tt, .markdown h2 code {
+    font-size: inherit !important;
+  }
+  
+  .markdown h3 tt, .markdown h3 code {
+    font-size: inherit !important;
+  }
+  
+  .markdown h4 tt, .markdown h4 code {
+    font-size: inherit !important;
+  }
+  
+  .markdown h5 tt, .markdown h5 code {
+    font-size: inherit !important;
+  }
+  
+  .markdown h6 tt, .markdown h6 code {
+    font-size: inherit !important;
+  }
+  
+  .markdown h1 {
+    font-size: 28px !important;
+    color: black !important;
+  }
+  
+  .markdown h2 {
+    font-size: 24px !important;
+    border-bottom: 1px solid #cccccc !important;
+    color: black !important;
+  }
+  
+  .markdown h3 {
+    font-size: 18px !important;
+  }
+  
+  .markdown h4 {
+    font-size: 16px !important;
+  }
+  
+  .markdown h5 {
+    font-size: 14px !important;
+  }
+  
+  .markdown h6 {
+    color: #777777 !important;
+    font-size: 14px !important;
+  }
+  
+  .markdown p, .markdown blockquote, .markdown ul, .markdown ol, .markdown dl, .markdown li, .markdown table, .markdown pre {
+    margin: 15px 0 !important;
+  }
+  
+  .markdown hr {
+    border: 0 none !important;
+    color: #cccccc !important;
+    height: 4px !important;
+    padding: 0 !important;
+  }
+  
+  .markdown > h2:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  .markdown > h1:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  .markdown > h1:first-child + h2 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  .markdown > h3:first-child, .markdown > h4:first-child, .markdown > h5:first-child, .markdown > h6:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  .markdown a:first-child h1, .markdown a:first-child h2, .markdown a:first-child h3, .markdown a:first-child h4, .markdown a:first-child h5, .markdown a:first-child h6 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  .markdown h1 p, .markdown h2 p, .markdown h3 p, .markdown h4 p, .markdown h5 p, .markdown h6 p {
+    margin-top: 0 !important;
+  }
+  
+  .markdown li p.first {
+    display: inline-block !important;
+  }
+  
+  .markdown ul, .markdown ol {
+    padding-left: 30px !important;
+  }
+  
+  .markdown ul :first-child, .markdown ol :first-child {
+    margin-top: 0 !important;
+  }
+  
+  .markdown ul :last-child, .markdown ol :last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .markdown dl {
+    padding: 0 !important;
+  }
+  
+  .markdown dl dt {
+    font-size: 14px !important;
+    font-weight: bold !important;
+    font-style: italic !important;
+    padding: 0 !important;
+    margin: 15px 0 5px !important;
+  }
+  
+  .markdown dl dt:first-child {
+    padding: 0 !important;
+  }
+  
+  .markdown dl dt > :first-child {
+    margin-top: 0 !important;
+  }
+  
+  .markdown dl dt > :last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .markdown dl dd {
+    margin: 0 0 15px !important;
+    padding: 0 15px !important;
+  }
+  
+  .markdown dl dd > :first-child {
+    margin-top: 0 !important;
+  }
+  
+  .markdown dl dd > :last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .markdown blockquote {
+    border-left: 4px solid #dddddd !important;
+    padding: 0 15px !important;
+    color: #777777 !important;
+  }
+  
+  .markdown blockquote > :first-child {
+    margin-top: 0 !important;
+  }
+  
+  .markdown blockquote > :last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .markdown table {
+    padding: 0 !important;
+  }
+  .markdown table tr {
+    border-top: 1px solid #cccccc !important;
+    background-color: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .markdown table tr:nth-child(2n) {
+    background-color: #f8f8f8 !important;
+  }
+  
+  .markdown table tr th {
+    font-weight: bold !important;
+    border: 1px solid #cccccc !important;
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 6px 13px !important;
+  }
+  
+  .markdown table tr td {
+    border: 1px solid #cccccc !important;
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 6px 13px !important;
+  }
+  
+  .markdown table tr th :first-child, .markdown table tr td :first-child {
+    margin-top: 0 !important;
+  }
+  
+  .markdown table tr th :last-child, .markdown table tr td :last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .markdown img {
+    max-width: 100% !important;
+  }
+  
+  .markdown span.frame {
+    display: block !important;
+    overflow: hidden !important;
+  }
+  
+  .markdown span.frame > span {
+    border: 1px solid #dddddd !important;
+    display: block !important;
+    float: left !important;
+    overflow: hidden !important;
+    margin: 13px 0 0 !important;
+    padding: 7px !important;
+    width: auto !important;
+  }
+  
+  .markdown span.frame span img {
+    display: block !important;
+    float: left !important;
+  }
+  
+  .markdown span.frame span span {
+    clear: both !important;
+    color: #333333 !important;
+    display: block !important;
+    padding: 5px 0 0 !important;
+  }
+  
+  .markdown span.align-center {
+    display: block !important;
+    overflow: hidden !important;
+    clear: both !important;
+  }
+  
+  .markdown span.align-center > span {
+    display: block !important;
+    overflow: hidden !important;
+    margin: 13px auto 0 !important;
+    text-align: center !important;
+  }
+  
+  .markdown span.align-center span img {
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  
+  .markdown span.align-right {
+    display: block !important;
+    overflow: hidden !important;
+    clear: both !important;
+  }
+  
+  .markdown span.align-right > span {
+    display: block !important;
+    overflow: hidden !important;
+    margin: 13px 0 0 !important;
+    text-align: right !important;
+  }
+  
+  .markdown span.align-right span img {
+    margin: 0 !important;
+    text-align: right !important;
+  }
+  
+  .markdown span.float-left {
+    display: block !important;
+    margin-right: 13px !important;
+    overflow: hidden !important;
+    float: left !important;
+  }
+  
+  .markdown span.float-left span {
+    margin: 13px 0 0 !important;
+  }
+  
+  .markdown span.float-right {
+    display: block !important;
+    margin-left: 13px !important;
+    overflow: hidden !important;
+    float: right !important;
+  }
+  
+  .markdown span.float-right > span {
+    display: block !important;
+    overflow: hidden !important;
+    margin: 13px auto 0 !important;
+    text-align: right !important;
+  }
+  
+  .markdown code, .markdown tt {
+    margin: 0 2px !important;
+    padding: 0 5px !important;
+    white-space: nowrap !important;
+    border: 1px solid #eaeaea !important;
+    background-color: #f8f8f8 !important;
+    border-radius: 3px !important;
+    color: currentColor !important;
+  }
+  
+  .markdown pre code {
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: pre !important;
+    border: none !important;
+    background: transparent !important;
+  }
+  
+  .markdown .highlight pre {
+    background-color: #f8f8f8 !important;
+    border: 1px solid #cccccc !important;
+    font-size: 13px !important;
+    line-height: 19px !important;
+    overflow: auto !important;
+    padding: 6px 10px !important;
+    border-radius: 3px !important;
+  }
+  
+  .markdown pre {
+    background-color: #f8f8f8 !important;
+    border: 1px solid #cccccc !important;
+    font-size: 13px !important;
+    line-height: 19px !important;
+    overflow: auto !important;
+    padding: 6px 10px !important;
+    border-radius: 3px !important;
+  }
+  
+  .markdown pre code, .markdown pre tt {
+    background-color: transparent !important;
+    border: none !important;
+  }

@@ -1,0 +1,131 @@
+.App {
+  text-align: center;
+}
+
+.title {
+  margin-top: 1em;
+}
+
+.deleting {
+  background-color: #d9534f40 !important;  
+}
+
+.note {
+  border-top: 1px solid #00000000 !important;
+  border-bottom: 1px solid #00000000 !important;
+  /* min-height: 2.5rem; */
+  white-space: pre-wrap;
+}
+.note:hover {
+  border-top-color: #0000000f !important;
+  border-bottom-color: #0000000f !important;
+}
+
+.ws-window {
+  flex-basis: 49%;
+  min-height: 49%;
+  max-height: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.icon-button {
+  cursor: pointer;
+  padding: 0.15rem;
+  border-radius: 20%;
+  margin: 0 0.1rem;
+}
+.icon-button:hover {
+  background-color: #00000018;
+}
+.icon-button:active {
+  background-color: #00000028;
+}
+
+.transparent, .transparent:focus {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #00000038 !important;
+  outline: 0 none !important;
+  box-shadow: none !important;
+}
+
+.h6-style {
+  font-size: 1.5rem !important;
+  margin-top: 0 !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+}
+
+.no-link-style, .no-link-style:hover {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.font-size-1rem {
+  font-size: 1rem;
+}
+
+.z-index-max {
+  z-index: 10000 !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.opacity-07 {
+  opacity: 0.7;
+}
+
+.no-borders, .no-borders:focus {
+  border: 0 !important;
+}
+
+.min-height-0 {
+  min-height: 0 !important;
+}
+
+.resize-none {
+  resize: none !important;
+}
+
+.hover-opaque {
+  opacity: 0.7;
+  transition: all .2s ease-in-out;
+}
+.hover-opaque:hover {
+  opacity: 1;
+}
+
+.hover-scaleup-11, .hover-scaleup-12 {
+  transition: all .2s ease-in-out;
+}
+.hover-scaleup-11:hover {
+  transform: scale(1.1);
+}
+.hover-scaleup-12:hover {
+  transform: scale(1.2);
+}
+
+.rotate-90{
+  transform: rotate(0deg);
+  transition: transform .1s linear;
+}
+.rotate-90.open{
+  transform: rotate(90deg);
+  transition: transform .1s linear;
+}
+
+.card-container{
+  height: 90vh;
+  margin: 0.2em;
+}
+
+.textarea {
+  width: 100%;
+  height: 100%; 
+  box-sizing: border-box;
+  font-family: monospace;
+}
